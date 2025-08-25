@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+
+body {
+  /* Fuente por defecto para toda la app */
+  font-family: var(--font-inter);
+}
+
+/* La clase 'font-sans' que pusimos en el layout del dashboard
+   usará la variable --font-poppins cuando esté disponible */
+.font-sans {
+  font-family: var(--font-poppins);
+}
+
+pre,
+code {
+  font-family: var(--font-roboto-mono);
+}
