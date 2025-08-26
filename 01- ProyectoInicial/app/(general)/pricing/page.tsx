@@ -1,3 +1,12 @@
+
+import { Metadata } from "next";
+
+export const metadata: Metadata={
+   title: "Precios",
+  description: "Sebas en la juega",
+  keywords: ["MAC", "agripao","programador", "Neiva"]
+}
+
 export default function PricingPage() {
   return (
    <> 

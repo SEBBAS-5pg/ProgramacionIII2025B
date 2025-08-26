@@ -1,4 +1,5 @@
 import { Poppins } from "next/font/google";
+import { Navbar } from "../components";
 
 // 1. Importamos y configuramos la nueva fuente
 const poppins = Poppins({
@@ -7,7 +8,7 @@ const poppins = Poppins({
   variable: "--font-poppins", // Creamos su propia variable CSS
 });
 
-export default function DashboardLayout({
+export default function GeneralLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -15,10 +16,14 @@ export default function DashboardLayout({
   // 2. NO usamos <html> ni <body> aquí.
   //    Envolvemos a los hijos en un div (o section, main, etc.)
   //    y le aplicamos la clase de la nueva fuente.
+  //https://developers.google.com/search/docs/crawling-indexing/special-tags?hl=es
   return (
-    <div className={`${poppins.variable} font-sans`}>
-      <h3>Este es el Sub Layout</h3>
+    <>
+      <Navbar />
+      <div className={`${poppins.variable} font-sans`}>
+      
       {children}
     </div>
+    </>
   );
 }

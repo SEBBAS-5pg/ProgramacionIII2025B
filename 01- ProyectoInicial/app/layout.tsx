@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 // 1. Importamos las nuevas fuentes de Google Fonts
 import { Inter, Roboto_Mono } from "next/font/google";
 import "./globals.css";
+import { Navbar } from "./components/navbar/Navbar";
 
 // 2. Configuramos la fuente 'Inter' para el texto general
 const inter = Inter({
@@ -27,11 +28,15 @@ export default function RootLayout({
 }>) {
   return (
     // 4. Aplicamos las variables de las fuentes a la etiqueta <html>
+
+    
     <html lang="en" className={`${inter.variable} ${robotoMono.variable}`}>
       <body>
-        <h2>Hola este es el Marco Principal</h2>
+        
         {children}
       </body>
     </html>
+  
+    
   );
 }
