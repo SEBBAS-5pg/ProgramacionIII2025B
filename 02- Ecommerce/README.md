@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Proyecto E-commerce - Programación III
 
-## Getting Started
+Este proyecto es una simulación de una tienda en línea (E-commerce) desarrollada como parte del curso de Programación III. La aplicación permite a los usuarios visualizar un catálogo de productos, agregarlos a un carrito de compras y gestionar su contenido de forma interactiva.
 
-First, run the development server:
+## ✨ Características
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+-   **Catálogo de Productos:** Muestra una lista de productos disponibles con su imagen, nombre y precio.
+-   **Carrito de Compras Interactivo:**
+    -   Añadir productos al carrito desde el catálogo.
+    -   Visualizar los productos añadidos en el carrito.
+    -   Eliminar productos individualmente.
+    -   Vaciar el carrito por completo.
+    -   Actualización automática del total de la compra.
+-   **Persistencia de Datos:** El carrito de compras utiliza `localStorage` para mantener los productos guardados aunque se recargue la página.
+-   **Diseño Responsivo:** Interfaz adaptable a diferentes tamaños de pantalla (móvil y escritorio).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 💻 Tecnologías Utilizadas
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+-   **HTML5:** Para la estructura y el contenido de la página.
+-   **CSS3:** Para el diseño y la estilización de la interfaz, utilizando Flexbox para un layout moderno.
+-   **JavaScript (ES6+):** Para toda la lógica interactiva, manipulación del DOM y gestión del carrito de compras.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Cómo Empezar
 
-## Learn More
+Este es un proyecto de front-end puro, por lo que no requiere de un servidor o dependencias complejas para funcionar.
 
-To learn more about Next.js, take a look at the following resources:
+1.  **Clona el repositorio:**
+    ```bash
+    git clone https://github.com/jaquimbayoc7/ProgramacionIII2025B.git
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2.  **Navega a la carpeta del proyecto:**
+    ```bash
+    cd ProgramacionIII2025B/02-\ Ecommerce
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3.  **Abre el archivo `index.html`:**
+    Abre el archivo `index.html` directamente en tu navegador web preferido (Google Chrome, Firefox, etc.).
 
-## Deploy on Vercel
+## 🎮 Uso
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1.  Explora el catálogo de productos en la página principal.
+2.  Haz clic en el botón **"Añadir al Carrito"** en los productos que desees comprar.
+3.  El ícono del carrito en la barra de navegación mostrará un contador con el número de artículos.
+4.  Haz clic en el ícono del carrito para ver un resumen de tu compra.
+5.  Desde el carrito, puedes eliminar artículos o vaciarlo por completo.
+6.  El total de la compra se actualiza automáticamente con cada cambio.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 👤 Autor
+
+-   **Jaquimbo Quimbayo Castro**
+-   GitHub: [@jaquimbayoc7](https://github.com/jaquimbayoc7)
