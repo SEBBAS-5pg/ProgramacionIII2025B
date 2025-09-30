@@ -8,16 +8,16 @@ interface Props{
 }
 
 
-export default function({params}:Props) {
-const{id}=params;
+export default function ({params}:Props) {
+  const {id}=params;
 
-if(id==='kids'){
-  notFound();
-}
+  if(id==='kids'){
+    notFound();
+  }
 
   return (
-    <main>
-      <h1 className={titleFont.className}>Category Page {id}</h1>
-    </main>
-  );
+    <div>
+        <h1 className={titleFont.className}>Category Page {id}</h1>
+    </div>
+  )
 }

@@ -1,10 +1,9 @@
 import { titleFont } from "@/config/fonts";
 
-
-export default function() {
+export default function () {
   return (
-    <main>
-      <h1 className={titleFont.className}>Listado de Orders Page</h1>
-    </main>
-  );
+    <div>
+        <h1 className={titleFont.className}>Orders Lists Page</h1>
+    </div>
+  )
 }

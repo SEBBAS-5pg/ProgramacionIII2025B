@@ -1,10 +1,11 @@
 import { titleFont } from "@/config/fonts";
 
 
-export default function() {
+export default function Home() {
   return (
     <main>
-      <h1 className={titleFont.className}>Auth page</h1>
+      <h1>Hola Mundo</h1>
+      <h1 className={titleFont.className}>Login Page</h1>
     </main>
   );
 }
