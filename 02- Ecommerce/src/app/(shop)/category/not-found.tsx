@@ -1,8 +1,9 @@
 import { NotFoundPage } from "@/components";
 
-
-export default function() {
+export default function () {
     return (
-        <NotFoundPage/>
+        <div>
+            <NotFoundPage />
+        </div>
     );
 }

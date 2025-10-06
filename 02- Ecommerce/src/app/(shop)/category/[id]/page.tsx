@@ -1,23 +1,48 @@
+
+import { ProductGrid, Title } from "@/components";
 import { titleFont } from "@/config/fonts";
+import { Category } from "@/interfaces";
+import { initialData } from "@/seed/seed";
 import { notFound } from "next/navigation";
+
+const seedProducts = initialData.products;
 
 interface Props{
   params:{
-    id:string;
+    id:Category;
   }
 }
 
 
-export default function ({params}:Props) {
-  const {id}=params;
+export default function({params}:Props) {
+const{id}=params;
 
-  if(id==='kids'){
-    notFound();
-  }
+const products = seedProducts.filter(product => product.gender === id);
+
+const labels:Record<Category, string> = {
+  'men':'Hombres',
+  'women':'Mujeres',
+  'kid': 'Niños',
+  'unisex':'Todos'
+}
+
+/*if(id==='kids'){
+  notFound();
+}*/
 
   return (
-    <div>
-        <h1 className={titleFont.className}>Category Page {id}</h1>
-    </div>
-  )
+    <>
+          <Title
+            title={`Artículos para ${labels[id]}`}
+            subtitle="El ecommerce para todos"
+            className="mb-2"
+          
+          />
+    
+          <ProductGrid
+            products={products}
+          
+          />
+        </>
+  );
 }
