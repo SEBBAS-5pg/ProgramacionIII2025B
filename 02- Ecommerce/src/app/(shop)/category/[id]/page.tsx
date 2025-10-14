@@ -14,8 +14,8 @@ interface Props{
 }
 
 
-export default function({params}:Props) {
-const{id}=params;
+export  default async function({params}:Props) {
+const{id}=await params;
 
 const products = seedProducts.filter(product => product.gender === id);
 
