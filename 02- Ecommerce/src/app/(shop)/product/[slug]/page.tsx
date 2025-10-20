@@ -1,4 +1,9 @@
-import { QuantitySelector, SizeSelector, SlideShowProduct } from "@/components";
+import {
+  QuantitySelector,
+  SizeSelector,
+  SlideShowProduct,
+  SlideShowProductMobile,
+} from "@/components";
 import { titleFont } from "@/config/fonts";
 import { initialData } from "@/seed/seed";
 import { notFound } from "next/navigation";
@@ -19,14 +24,11 @@ export default async function ({ params }: Props) {
   }
   return (
     <div className="mt-5 mb-20 grid grid-cols-1 md:grid-cols-3 gap-3">
-      {/* SlideShow*/}
-
+      {/* SLIDE SHOW MOBILE*/}
+      <SlideShowProductMobile title={product.title} images={product.images} className="block md:hidden"/>
+      {/* SLIDE SHOW DESKTOP*/}
       <div className="col-span-1 md:col-span-2">
-        <SlideShowProduct 
-        title={product.title}
-        images={product.images}
-      
-      />
+        <SlideShowProduct title={product.title} images={product.images} className="hidden md:block" />
       </div>
 
       {/* Detalles*/}
@@ -36,27 +38,21 @@ export default async function ({ params }: Props) {
         </h1>
 
         {/* Tallas*/}
-        <SizeSelector 
+        <SizeSelector
           selectedSize={product.sizes[0]}
           availablesSizes={product.sizes}
         />
         {/* Cantidad*/}
 
-        <QuantitySelector 
-          quantity={2}
-        />
+        <QuantitySelector quantity={2} />
 
         {/* Botón del Carrito*/}
         <button className="btn-primary my-5">Agregar al Carrito</button>
 
         {/* Descripción*/}
 
-        <h3 className="font-bold text-sm">
-          Descripción
-        </h3>
-        <p className="font-light">
-          {product.description}
-        </p>
+        <h3 className="font-bold text-sm">Descripción</h3>
+        <p className="font-light">{product.description}</p>
       </div>
     </div>
   );
