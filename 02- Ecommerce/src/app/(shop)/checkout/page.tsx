@@ -72,6 +72,15 @@ export default function () {
               <span className="mt-5 text-2xl text-rigth">$ 100</span>
             </div>
             <div className="mt-5 mb-2 w-full">
+              <p className="mb-5">
+                <span className="text-xs">
+                  Al hacer click en "Colocar Orden", Aceptas nuestros{" "}
+                  <a href="#" className="underline">
+                    {" "}
+                    terminos y condiciones{" "}
+                  </a>{" "}
+                </span>
+              </p>
               <Link
                 className="flex btn-primary justify-center"
                 href="orders/123"
